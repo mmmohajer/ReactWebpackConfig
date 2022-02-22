@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import "basedesign-iswad/dist/style.js";
 
 import "./assets/styles/main.scss";
 import AppRoutes from "./AppRoutes";
