@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const fse = require("fs-extra");
+const Dotenv = require("dotenv-webpack");
 
 class RunAfterCompile {
   apply(compiler) {
@@ -38,6 +39,15 @@ let config = {
       filename: "index.html",
       template: "./src/index.html",
     }),
+    new Dotenv({
+      path: "./.env",
+      safe: true,
+      allowEmptyValues: true,
+      systemvars: true,
+      silent: true,
+      defaults: false,
+      prefix: "process.env.",
+    }),
   ],
   module: {
     rules: [
@@ -49,6 +59,7 @@ let config = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-react", "@babel/preset-env"],
+            plugins: ["@babel/transform-runtime"],
           },
         },
       },
