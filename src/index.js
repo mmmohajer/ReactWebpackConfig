@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "basedesign-iswad/dist/style.js";
+import "basedesign-iswad/dist/styles.min.css";
 
 import "Styles/main.scss";
 import App from "./App";

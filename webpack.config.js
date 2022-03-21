@@ -19,7 +19,7 @@ class RunAfterCompile {
 }
 
 let sassConfig = {
-  test: /\.scss$/i,
+  test: /\.(css|scss)$/i,
   use: ["css-loader", "sass-loader"],
 };
 
