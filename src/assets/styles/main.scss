@@ -17,4 +17,9 @@
 @import "modules/_links";
 
 // From Iswad
-@import "iswad/_navbar";
+@import "iswad/_adminNav";
+@import "iswad/alert";
+@import "iswad/desktopNavBar";
+@import "iswad/mobileNavBar";
+@import "iswad/pagination";
+@import "iswad/table";
